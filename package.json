@@ -1,0 +1,29 @@
+{
+  "name": "hack21-policy-dial",
+  "version": "1.0.0",
+  "description": "BigID hackathon 2021 - Idea - Policy Dial",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pravinbhat/hack21-policy-dial.git"
+  },
+  "keywords": [],
+  "author": "Pravin Bhat <pbhat@bigid.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pravinbhat/hack21-policy-dial/issues"
+  },
+  "homepage": "https://github.com/pravinbhat/hack21-policy-dial#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
