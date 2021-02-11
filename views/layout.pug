@@ -2,6 +2,38 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    script(src="https://www.gstatic.com/charts/loader.js")
+    script(src="/javascripts/dial.js")
+    script.
+      google.charts.load('current', {
+        'packages': ['gauge']
+      });
+      google.charts.setOnLoadCallback(drawChart);
+
+      var policySummary = {
+      "totalPoliciesCount":21,
+      "triggeredPoliciesCount":7,
+      "totalCategoryCount":3,
+      "categoriesWithFinding":["Privacy","Protection"],
+      "policyScorePercent":33
+      };
+
+      var policySummaryWeek = {
+      "totalPoliciesCount":25,
+      "triggeredPoliciesCount":5,
+      "totalCategoryCount":3,
+      "categoriesWithFinding":["Privacy","Protection"],
+      "policyScorePercent":33
+      };
+
+      var policySummaryMonth = {
+      "totalPoliciesCount":30,
+      "triggeredPoliciesCount":10,
+      "totalCategoryCount":3,
+      "categoriesWithFinding":["Privacy","Protection"],
+      "policyScorePercent":33
+      };
+
   body
     block content
