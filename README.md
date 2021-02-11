@@ -9,3 +9,13 @@ A dial based App/Visualization designed for stakeholders (e.g. data-stewards) to
 
 ### Implementation: 
 Visualization is rendered using an intuitive dial that provides stats on progress made on addressing policy findings. At the highest level it provides summary stats showing latest triggered policies findings v/s total policies defined. Under it you also see a couple additional dials showing historical stats on the same. You can drilldown (click/navigate/swipe) from here to see several similar latestest vs historical policy-type level summary dials. Further drill down from here provides latestest vs historical details of individual policy findings under a specific category.
+
+### Running the Application
+
+#### Prerequisites 
+NodeJS version 14.x
+
+#### Building & running the app locally
+Clone the project (or download the zip)
+Goto the project folder & run command `npm install` followed by `npm start`
+App should be up on http://localhost:3000/
