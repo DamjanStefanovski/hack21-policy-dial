@@ -51,9 +51,19 @@ app.get('/policytypes/:policyType', (req, res) => {
 // curl -X GET /policytypes/Privacy/data
 app.get('/policytypes/:policyType/data', (req, res) => {
   if (req.params.policyType.toLowerCase() === "privacy") {
-    return res.send(policydata.policyPrivacy);
+    return res.send({
+      title: req.params.policyType,
+      policySummary: policydata.policyPrivacy,
+      policySummaryWeek: policydata.policyPrivacyWeek,
+      policySummaryMonth: policydata.policyPrivacyMonth
+    });
   } else if (req.params.policyType.toLowerCase() === "protection") {
-    return res.send(policydata.policyProtection);
+    return res.send({
+      title: req.params.policyType,
+      policySummary: policydata.policyProtection,
+      policySummaryWeek: policydata.policyProtectionWeek,
+      policySummaryMonth: policydata.policyProtectionMonth
+    });
   }
 
   return res.send("");

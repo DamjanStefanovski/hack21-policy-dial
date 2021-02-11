@@ -34,14 +34,14 @@ module.exports = {
         "policyType": "Privacy",
         "totalPoliciesCount": 8,
         "triggeredPoliciesCount": 5,
-        "triggeredPolicies": ["SSN", "RetentionExpired", "Medical", "Address"],
+        "triggeredPolicies": ["SSN", "RetentionExpired", "Finding-A", "Address", "Finding-B"],
         "policyScorePercent": 50
     },
     policyPrivacyMonth: {
         "policyType": "Privacy",
         "totalPoliciesCount": 8,
         "triggeredPoliciesCount": 6,
-        "triggeredPolicies": ["SSN", "RetentionExpired", "Medical", "Address"],
+        "triggeredPolicies": ["SSN", "RetentionExpired", "Finding-A", "Address", "Finding-B", "Finding-C"],
         "policyScorePercent": 50
     },
     policyProtection: {
@@ -55,14 +55,14 @@ module.exports = {
         "policyType": "Protection",
         "totalPoliciesCount": 7,
         "triggeredPoliciesCount": 5,
-        "triggeredPolicies": ["OpenAccess", "Token", "Duplicates"],
+        "triggeredPolicies": ["SSN", "RetentionExpired", "Finding-A", "Address", "Finding-B"],
         "policyScorePercent": 43
     },
     policyProtectionMonth: {
         "policyType": "Protection",
         "totalPoliciesCount": 7,
         "triggeredPoliciesCount": 1,
-        "triggeredPolicies": ["OpenAccess", "Token", "Duplicates"],
+        "triggeredPolicies": ["OpenAccess"],
         "policyScorePercent": 43
     },
 
