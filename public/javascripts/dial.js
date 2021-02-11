@@ -1,4 +1,3 @@
-
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],

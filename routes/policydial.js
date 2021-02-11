@@ -62,22 +62,46 @@ app.get('/policytypes/:policyType/data', (req, res) => {
 // curl -X GET /ssn
 app.get('/:policyName', (req, res) => {
   if (req.params.policyName.toLowerCase() === "ssn") {
-    return res.send(policydata.privacySSNpolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.privacySSNpolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "retentionexpired") {
-    return res.send(policydata.privacyRetentionExpiredPolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.privacyRetentionExpiredPolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "medical") {
-    return res.send(policydata.privacyMedicalPolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.privacyMedicalPolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "address") {
-    return res.send(policydata.privacyAddressPolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.privacyAddressPolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "openaccess") {
-    return res.send(policydata.protectionOpenAccessPolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.protectionOpenAccessPolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "token") {
-    return res.send(policydata.protectionTokenolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.protectionTokenolicy
+    });
   } else if (req.params.policyName.toLowerCase() === "duplicates") {
-    return res.send(policydata.protectionDuplicatesPolicy);
+    return res.render('policydetails', {
+      title: req.params.policyName + ' Details!',
+      policyDetails: policydata.protectionDuplicatesPolicy
+    });
   }
 
-  return res.send("");
+  return res.render('policydetails', {
+    title: 'No such policy!',
+    policyDetails: ''
+  });
 });
 
 // curl -X GET /policydial/ssn/data
