@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    script(src="https://www.gstatic.com/charts/loader.js")
+    script(src="/javascripts/table.js")
+    script.
+      google.charts.load('current', {
+        'packages': ['table']
+      });
+      google.charts.setOnLoadCallback(drawTable);
+
+      var policyDetails = !{JSON.stringify(policyDetails)};
+
+  body
+    block content
