@@ -76,7 +76,7 @@ function drawChart() {
     historyMonthChart.draw(historyMonthData, historyMonthOptions);
 
     setInterval(function () {
-        data.setValue(0, 1, policySummary.triggeredPoliciesCount + Math.round(5 * Math.random()));
+        data.setValue(0, 1, Math.round(policySummary.totalPoliciesCount * Math.random()));
         chart.draw(data, options);
     }, 3000);
 }

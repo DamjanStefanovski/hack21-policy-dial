@@ -3,21 +3,21 @@ var policydata = require('./data.js');
 var app = express.Router();
 
 // Summary
-const policiesSummary = {
+const policySummary = {
   "totalPoliciesCount": 21,
   "triggeredPoliciesCount": 7,
   "totalCategoryCount": 3,
   "categoriesWithFinding": ["Privacy", "Protection"],
   "policyScorePercent": 33
 };
-const policiesSummaryLastWeek = {
+const policySummaryWeek = {
   "totalPoliciesCount": 21,
   "triggeredPoliciesCount": 5,
   "totalCategoryCount": 3,
   "categoriesWithFinding": ["Privacy", "Protection"],
   "policyScorePercent": 23
 };
-const policiesSummaryLastMonth = {
+const policySummaryMonth = {
   "totalPoliciesCount": 21,
   "triggeredPoliciesCount": 10,
   "totalCategoryCount": 3,
@@ -25,9 +25,22 @@ const policiesSummaryLastMonth = {
   "policyScorePercent": 48
 };
 
+/* GET home page. */
+app.get('/', function (req, res, next) {
+  res.render('index', { title: 'Policy Dial!', 
+  policySummary: policySummary,
+  policySummaryWeek: policySummaryWeek,
+  policySummaryMonth: policySummaryMonth
+ });
+});
+
 // curl -X GET /policydial
-app.get('/', (req, res) => {
-  return res.send(policiesSummary);
+app.get('/data', (req, res) => {
+  return res.send({ title: 'Policy Dial!', 
+  policySummary: policySummary,
+  policySummaryWeek: policySummaryWeek,
+  policySummaryMonth: policySummaryMonth
+ });
 });
 
 // curl -X GET /policydial/policytypes

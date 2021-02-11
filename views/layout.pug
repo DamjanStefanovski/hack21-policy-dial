@@ -11,29 +11,9 @@ html
       });
       google.charts.setOnLoadCallback(drawChart);
 
-      var policySummary = {
-      "totalPoliciesCount":21,
-      "triggeredPoliciesCount":7,
-      "totalCategoryCount":3,
-      "categoriesWithFinding":["Privacy","Protection"],
-      "policyScorePercent":33
-      };
-
-      var policySummaryWeek = {
-      "totalPoliciesCount":25,
-      "triggeredPoliciesCount":5,
-      "totalCategoryCount":3,
-      "categoriesWithFinding":["Privacy","Protection"],
-      "policyScorePercent":33
-      };
-
-      var policySummaryMonth = {
-      "totalPoliciesCount":30,
-      "triggeredPoliciesCount":10,
-      "totalCategoryCount":3,
-      "categoriesWithFinding":["Privacy","Protection"],
-      "policyScorePercent":33
-      };
+      var policySummary = !{JSON.stringify(policySummary)};
+      var policySummaryWeek = !{JSON.stringify(policySummaryWeek)};
+      var policySummaryMonth = !{JSON.stringify(policySummaryMonth)};
 
   body
     block content
