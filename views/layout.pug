@@ -18,15 +18,16 @@ html
   body
     block content
     if policySummary.categoriesWithFinding
-      a(href="/data") Know Your Data!
+      a(href="/data") See your Data!
       p
         each val in policySummary.categoriesWithFinding
           a(href="/policytypes/" + val) #{val}
           br   
 
     if policySummary.triggeredPolicies
-      a(href="/policytypes/" + policySummary.policyType + "/data") Know Your Data!
+      a(href="/policytypes/" + policySummary.policyType + "/data") See your Data!
       p
         each val in policySummary.triggeredPolicies
           a(href="/" + val) #{val}
           br
+
