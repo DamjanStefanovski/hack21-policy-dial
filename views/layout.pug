@@ -17,3 +17,15 @@ html
 
   body
     block content
+
+    if policySummary.categoriesWithFinding
+      p
+        each val in policySummary.categoriesWithFinding
+          a(href="/policytypes/" + val) #{val}
+          br   
+
+    if policySummary.triggeredPolicies
+      p
+        each val in policySummary.triggeredPolicies
+          a(href="/" + val) #{val}
+          br

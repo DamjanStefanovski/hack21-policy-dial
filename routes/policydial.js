@@ -104,7 +104,7 @@ app.get('/:policyName', (req, res) => {
   });
 });
 
-// curl -X GET /policydial/ssn/data
+// curl -X GET /ssn/data
 app.get('/:policyName/data', (req, res) => {
   if (req.params.policyName.toLowerCase() === "ssn") {
     return res.send(policydata.privacySSNpolicy);
