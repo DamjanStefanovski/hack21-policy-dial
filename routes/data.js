@@ -26,12 +26,42 @@ module.exports = {
     policyPrivacy: {
         "policyType": "Privacy",
         "totalPoliciesCount": 8,
+        "triggeredPoliciesCount": 4,
+        "triggeredPolicies": ["SSN", "RetentionExpired", "Medical", "Address"],
+        "policyScorePercent": 50
+    },
+    policyPrivacyWeek: {
+        "policyType": "Privacy",
+        "totalPoliciesCount": 8,
+        "triggeredPoliciesCount": 5,
+        "triggeredPolicies": ["SSN", "RetentionExpired", "Medical", "Address"],
+        "policyScorePercent": 50
+    },
+    policyPrivacyMonth: {
+        "policyType": "Privacy",
+        "totalPoliciesCount": 8,
+        "triggeredPoliciesCount": 6,
         "triggeredPolicies": ["SSN", "RetentionExpired", "Medical", "Address"],
         "policyScorePercent": 50
     },
     policyProtection: {
         "policyType": "Protection",
         "totalPoliciesCount": 7,
+        "triggeredPoliciesCount": 3,
+        "triggeredPolicies": ["OpenAccess", "Token", "Duplicates"],
+        "policyScorePercent": 43
+    },
+    policyProtectionWeek: {
+        "policyType": "Protection",
+        "totalPoliciesCount": 7,
+        "triggeredPoliciesCount": 5,
+        "triggeredPolicies": ["OpenAccess", "Token", "Duplicates"],
+        "policyScorePercent": 43
+    },
+    policyProtectionMonth: {
+        "policyType": "Protection",
+        "totalPoliciesCount": 7,
+        "triggeredPoliciesCount": 1,
         "triggeredPolicies": ["OpenAccess", "Token", "Duplicates"],
         "policyScorePercent": 43
     },
